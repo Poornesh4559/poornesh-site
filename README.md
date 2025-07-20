@@ -26,6 +26,7 @@ A visually striking, cyberpunk-themed portfolio site for **Poornesh**. This site
 2. Push your changes to the `main` branch
 3. In your repo settings, enable GitHub Pages (root directory, main branch)
 4. Your site will be live at `https://<your-username>.github.io/<repo-name>/`
+5. Here I'm using my domain poornesh.site
 
 ## Customization
 - **Change background:** Replace the image in `img/` and update the path in `style.css`
@@ -36,10 +37,6 @@ A visually striking, cyberpunk-themed portfolio site for **Poornesh**. This site
 ## Screenshot
 _Add a screenshot of your site here!_
 
----
 
-Inspired by cyberpunk aesthetics and sites like [kprverse.com](https://kprverse.com/).
 
----
-
-© 2024 Poornesh. Feel free to fork and customize for your own portfolio!
+© 2025 Poornesh. Feel free to fork and customize for your own portfolio!
