@@ -234,6 +234,26 @@ header {
 }
 @media (max-width: 700px) {
   header { padding: 2rem 0.5rem 1rem 0.5rem; }
-  .card { padding: 1.2rem 0.7rem; width: 99%; }
+  .card {
+    padding: 1.2rem 0.7rem;
+    width: 99%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+    box-sizing: border-box;
+  }
   .skills { flex-direction: column; gap: 0.5rem; }
+  .glitch {
+    font-size: 2.2rem;
+    max-width: 98vw;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+}
+
+.contact-link {
+  color: #ff00ea !important;
+  text-decoration: underline;
 } 
