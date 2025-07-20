@@ -1,9 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Poornesh S</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poornesh Saravanan | Cyberpunk Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello! I'm Poornesh S</h1>
+  <div class="scanlines"></div>
+  <header>
+    <div class="glitch">Poornesh</div>
+  </header>
+
+  <div class="cards-container">
+    <section class="card" id="about-card">
+      <div class="section-title center">About / Education</div>
+      <p><b>Bachelor of Engineering</b> in Electronics and Communication<br>
+      <b>Anna University - MIT</b> &mdash; Chennai, India<br>
+      <b>GPA:</b> 8.9/10<br>
+      <b>Graduated:</b> May 2023</p>
+    </section>
+
+    <section class="card" id="experience-card">
+      <div class="section-title center">Experience</div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <b>Accenture</b> &mdash; Data Eng, Mgmt and Governance Analyst<br>
+          <i>Sep 2023 – Present, Pune</i>
+          <ul>
+            <li>Built a new batch ingestion framework using Dataflow (Python) to streamline file ingestion from GCS to BigQuery</li>
+            <li>Enhanced Spark-based ingestion framework, improving date handling, reconciliation, and reliability</li>
+            <li>Diagnosed and fixed file-related issues in shell scripts, improving automations and reducing failures</li>
+            <li>Designed and developed end-to-end data pipelines with Cloud Composer (Airflow), Dataproc (Pig, Spark), and GCS</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <b>ETL Management Project</b> &mdash; Media & Communication Sector (US)<br>
+          <i>2025</i>
+          <ul>
+            <li>Built ETL pipelines to journal (SCD/CDC) data from Oracle/Postgres DBs to Warehouse</li>
+            <li>Worked with Minio (S3 formatted OnPrem storage), Hive tables, and homegrown ETL tools</li>
+            <li>Managed jobs on provisioned servers through Spark clusters</li>
+            <li>Built a Log-Extraction Pipeline for Spark logs with Python</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <b>TCO</b> &mdash; Media & Communication Sector (US)
+          <ul>
+            <li>Worked on AWS CUR (Cost and Usage Report) data for cost analysis and reporting</li>
+            <li>Used Databricks for ETL of CUR, set up Amazon Quicksight for dashboards</li>
+            <li>Built a simplified AWS cost calculator API using AWS Lambda and API Gateway</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="projects-card">
+      <div class="section-title center">Projects & Research</div>
+      <ul>
+        <li><b>Machine Learning Approach for Soil Nutrient Prediction</b><br>
+          Developed ML model for soil nutrient prediction across Tamil Nadu.<br>
+          <a href="https://ieeexplore.ieee.org/document/10405095/" target="_blank">Research Paper</a>
+        </li>
+        <li><b>IoT - LoRaWAN Tech</b><br>
+          Worked with LoRaWAN modules for real-time IoT projects.<br>
+          <a href="https://ieeexplore.ieee.org/document/10156966" target="_blank">Research Paper</a>
+        </li>
+        <li><b>Other Projects</b>: <a href="https://github.com/poornesh4559" target="_blank">GitHub</a></li>
+      </ul>
+    </section>
+
+    <section class="card" id="skills-card">
+      <div class="section-title center">Skills</div>
+      <div class="skills">
+        <div class="skill">SQL</div>
+        <div class="skill">Apache Spark (Python, Scala)</div>
+        <div class="skill">BigQuery</div>
+        <div class="skill">Databricks</div>
+        <div class="skill">Airflow</div>
+        <div class="skill">Cloud Storages</div>
+        <div class="skill">UNIX</div>
+        <div class="skill">AWS: S3, Athena, Lambda, API Gateway, QuickSight, Glue</div>
+        <div class="skill">GCP: Dataproc, Dataflow, GCS, Composer</div>
+        <div class="skill">Git</div>
+        <div class="skill">Python</div>
+        <div class="skill">Scala</div>
+        <div class="skill">Shell Script</div>
+      </div>
+    </section>
+
+    <section class="card" id="contact-card">
+      <div class="section-title center">Contact</div>
+      <p>Email: <a href="mailto:poorneshofficial@gmail.com">poorneshofficial@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://in.linkedin.com/in/poornesh-s-3093991b0" target="_blank">poornesh-s-3093991b0</a></p>
+      <p>GitHub: <a href="https://github.com/poornesh4559" target="_blank">poornesh4559</a></p>
+    </section>
+  </div>
+
+  <div style="text-align:center; margin: 3rem 0 2rem 0;">
+    <a class="resume-btn" href="POORNESH_DE.pdf" download>Download Resume</a>
+  </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
