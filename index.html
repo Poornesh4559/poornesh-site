@@ -6,109 +6,229 @@
   <title>Poornesh | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
+  <!-- Loading Screen -->
+  <div id="loader">
+    <div class="loader-text">INITIALIZING...</div>
+    <div class="loader-bar">
+      <div class="loader-progress"></div>
+    </div>
+  </div>
+
+  <!-- Particle Background -->
+  <canvas id="particles"></canvas>
+  <div class="bg-overlay"></div>
   <div class="scanlines"></div>
-  <header>
-    <div class="glitch">Poornesh</div>
-  </header>
 
-  <div class="cards-container">
-    <section class="card" id="about-card">
-      <div class="section-title center">About</div>
-      <p style="font-size:1.1rem; margin-bottom:1.5rem;">Yo! I'm Poornesh, data guy, tech explorer
-        (lowkey into everything), and your go-to for turning chaos into clean code. I chill with big data, build with Spark, and love crafting scalable pipelines that actually work. Off the clock, I’m all about anime binges, gaming marathons, and bike rides that clear the mind. I’ve got a knack for breaking things just so I can fix them better; call it hands-on learning :). From deploying workflows to dodging in boss fights, I stay curious, passionate, and always down to level up. Life's an open-world game, and I'm grinding with purpose. 🎮📊🏍️</p>
-      <div id="about-carousel" style="margin-bottom:1.5rem;">
-        <!-- Carousel placeholder -->
-      </div>
-    </section>
+  <div class="content-wrapper">
+    <header>
+      <div class="glitch">Poornesh</div>
+    </header>
 
-    <section class="card" id="education-card">
-      <div class="section-title center">Education</div>
-      <p><b>Bachelor of Engineering</b> in Electronics and Communication<br>
-      <b>Anna University - MIT</b> - Chennai, India<br>
-      <b>GPA:</b> 8.9/10<br>
-      <b>Graduated:</b> May 2023</p>
-    </section>
-
-    <section class="card" id="experience-card">
-      <div class="section-title center">Experience</div>
-      <div class="timeline">
-        <div class="timeline-item">
-          <b>Accenture</b> - Data Eng, Mgmt and Governance Analyst<br>
-          <i>Sep 2023 – Present, Coimbatore</i>
-          <div style="margin-left:1.2em; margin-top:0.7em;">
-            <b style="color:#ff00ea;">On Prem to GCP Migration project</b> <span>- Banking sector (UK), 2024</span>
-            <ul>
-              <li>Built a new batch ingestion framework using Dataflow (Python) to streamline file ingestion from GCS to BigQuery</li>
-              <li>Made key enhancements to Spark-based ingestion framework, improving date handling, reconciliation updates, and overall reliability</li>
-              <li>Diagnosed and fixed file-related issues in shell scripts, improving automations and reducing failures</li>
-              <li>Designed and developed many end-to-end data pipelines for ingestion, curation, and consumption layers with Cloud Composer (Airflow), Dataproc (Pig, Spark), and Google Cloud Storage (GCS)</li>
-            </ul>
-            <b style="color:#ff00ea;">ETL Management project</b> <span>- Media & Communication sector (US), 2025</span>
-            <ul>
-              <li>Built ETL pipelines to journal (SCD/CDC) data from native Oracle/Postgres DBs to Warehouse (analysis, schema/table development, QA)</li>
-              <li>Worked with Minio (S3 formatted OnPrem storage solutions) and Hive tables to build a warehouse; used homegrown ETL tools for job scheduling and loading</li>
-              <li>Managed jobs that ran on provisioned servers through Spark clusters</li>
-              <li>Built a Log-Extraction Pipeline for Spark logs with Python</li>
-            </ul>
-            <b style="color:#ff00ea;">TCO</b> <span>- Media & Communication sector (US)</span>
-            <ul>
-              <li>Worked on AWS CUR (Cost and Usage Report) data to enable cost analysis and report on usage across the organization</li>
-              <li>Used Databricks for data ETL of CUR, and set up Amazon Quicksight for Dashboard</li>
-              <li>Built a simplified AWS cost calculator API using AWS Lambda and API Gateway</li>
-            </ul>
+    <div class="cards-container">
+      <!-- About Card with Carousel -->
+      <section class="card" id="about-card">
+        <div class="section-title">About</div>
+        <p style="font-size:1.1rem; margin-bottom:1.5rem;">
+          Yo! I'm Poornesh, data guy, tech explorer (lowkey into everything), and your go-to for turning chaos into clean code. 
+          I chill with big data, build with Spark, and love crafting scalable pipelines that actually work. Off the clock, I'm all 
+          about anime binges, gaming marathons, and bike rides that clear the mind. I've got a knack for breaking things just so I 
+          can fix them better; call it hands-on learning :). From deploying workflows to dodging in boss fights, I stay curious, 
+          passionate, and always down to level up. Life's an open-world game, and I'm grinding with purpose. 🎮📊🏍️
+        </p>
+        
+        <div class="carousel">
+          <div class="carousel-track" id="carouselTrack">
+            <div class="carousel-slide">
+              <div class="carousel-content">
+                <div class="carousel-icon">⚡</div>
+                <strong>Data Engineering Expert</strong><br>
+                Building scalable pipelines with Spark, Airflow & Cloud tech
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="carousel-content">
+                <div class="carousel-icon">🎮</div>
+                <strong>Gaming Enthusiast</strong><br>
+                Boss fights, open-world adventures & strategic gameplay
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="carousel-content">
+                <div class="carousel-icon">🏍️</div>
+                <strong>Bike Rider</strong><br>
+                Clearing the mind one ride at a time
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="carousel-content">
+                <div class="carousel-icon">📺</div>
+                <strong>Anime Fan</strong><br>
+                Epic stories, character development & binge marathons
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+        <div class="carousel-dots" id="carouselDots"></div>
+      </section>
 
-    <section class="card" id="projects-card">
-      <div class="section-title center">Projects & Research</div>
-      <ul>
-        <li><b>Machine Learning Approach for Soil Nutrient Prediction</b><br>
-          Developed ML model for soil nutrient prediction across Tamil Nadu.<br>
-          <a href="https://ieeexplore.ieee.org/document/10405095/" target="_blank">Research Paper</a>
-        </li>
-        <li><b>IoT - LoRaWAN Tech</b><br>
-          Worked with LoRaWAN modules for real-time IoT projects.<br>
-          <a href="https://ieeexplore.ieee.org/document/10156966" target="_blank">Research Paper</a>
-        </li>
-        <li><b>Other Projects</b>: <a href="https://github.com/poornesh4559" target="_blank">GitHub</a></li>
-      </ul>
-    </section>
+      <!-- Education Card -->
+      <section class="card" id="education-card">
+        <div class="section-title">Education</div>
+        <p><b>Bachelor of Engineering</b> in Electronics and Communication<br>
+        <b>Anna University - MIT</b> - Chennai, India<br>
+        <b>GPA:</b> 8.9/10<br>
+        <b>Graduated:</b> May 2023</p>
+      </section>
 
-    <section class="card" id="skills-card">
-      <div class="section-title center">Skills</div>
-      <div class="skills">
-        <div class="skill">SQL</div>
-        <div class="skill">Apache Spark (Python, Scala)</div>
-        <div class="skill">BigQuery</div>
-        <div class="skill">Databricks</div>
-        <div class="skill">Airflow</div>
-        <div class="skill">Cloud Storages</div>
-        <div class="skill">UNIX</div>
-        <div class="skill">AWS: S3, Athena, Lambda, API Gateway, QuickSight, Glue</div>
-        <div class="skill">GCP: Dataproc, Dataflow, GCS, Composer</div>
-        <div class="skill">Git</div>
-        <div class="skill">Python</div>
-        <div class="skill">Scala</div>
-        <div class="skill">Shell Script</div>
-      </div>
-    </section>
+      <!-- Experience Card with Timeline Animation -->
+      <section class="card" id="experience-card">
+        <div class="section-title">Experience</div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <b>Accenture</b> - Data Eng, Mgmt and Governance Analyst<br>
+            <i>Sep 2023 – Present, Coimbatore</i>
+            <div style="margin-left:1.2em; margin-top:0.7em;">
+              <b style="color:#ff00ea;">On Prem to GCP Migration project</b> <span>- Banking sector (UK), 2024</span>
+              <ul style="margin-left:1.5em; margin-top:0.5em;">
+                <li>Built a new batch ingestion framework using Dataflow (Python) to streamline file ingestion from GCS to BigQuery</li>
+                <li>Made key enhancements to Spark-based ingestion framework, improving date handling, reconciliation updates, and overall reliability</li>
+                <li>Diagnosed and fixed file-related issues in shell scripts, improving automations and reducing failures</li>
+                <li>Designed and developed many end-to-end data pipelines for ingestion, curation, and consumption layers with Cloud Composer (Airflow), Dataproc (Pig, Spark), and Google Cloud Storage (GCS)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div style="margin-left:0;">
+              <b style="color:#ff00ea;">ETL Management project</b> <span>- Media & Communication sector (US), 2025</span>
+              <ul style="margin-left:1.5em; margin-top:0.5em;">
+                <li>Built ETL pipelines to journal (SCD/CDC) data from native Oracle/Postgres DBs to Warehouse (analysis, schema/table development, QA)</li>
+                <li>Worked with Minio (S3 formatted OnPrem storage solutions) and Hive tables to build a warehouse; used homegrown ETL tools for job scheduling and loading</li>
+                <li>Managed jobs that ran on provisioned servers through Spark clusters</li>
+                <li>Built a Log-Extraction Pipeline for Spark logs with Python</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div style="margin-left:0;">
+              <b style="color:#ff00ea;">TCO</b> <span>- Media & Communication sector (US)</span>
+              <ul style="margin-left:1.5em; margin-top:0.5em;">
+                <li>Worked on AWS CUR (Cost and Usage Report) data to enable cost analysis and report on usage across the organization</li>
+                <li>Used Databricks for data ETL of CUR, and set up Amazon Quicksight for Dashboard</li>
+                <li>Built a simplified AWS cost calculator API using AWS Lambda and API Gateway</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <section class="card" id="contact-card">
-      <div class="section-title center">Contact</div>
-      <p>Email: <a class="contact-link" href="mailto:poorneshofficial@gmail.com">poorneshofficial@gmail.com</a></p>
-      <p>LinkedIn: <a class="contact-link" href="https://in.linkedin.com/in/poornesh-s-3093991b0" target="_blank">poornesh-s-3093991b0</a></p>
-      <p>GitHub: <a class="contact-link" href="https://github.com/poornesh4559" target="_blank">poornesh4559</a></p>
-    </section>
+      <!-- Projects Card with Grid Layout -->
+      <section class="card" id="projects-card">
+        <div class="section-title">Projects & Research</div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-title">ML Soil Nutrient Prediction</div>
+            <div class="project-desc">
+              Developed ML model for soil nutrient prediction across Tamil Nadu using advanced algorithms.
+            </div>
+            <a href="https://ieeexplore.ieee.org/document/10405095/" target="_blank" class="project-link">View Paper →</a>
+          </div>
+          <div class="project-card">
+            <div class="project-title">IoT - LoRaWAN Technology</div>
+            <div class="project-desc">
+              Worked with LoRaWAN modules for real-time IoT projects and long-range communication.
+            </div>
+            <a href="https://ieeexplore.ieee.org/document/10156966" target="_blank" class="project-link">View Paper →</a>
+          </div>
+          <div class="project-card">
+            <div class="project-title">More Projects</div>
+            <div class="project-desc">
+              Check out my other projects, experiments, and open-source contributions on GitHub.
+            </div>
+            <a href="https://github.com/poornesh4559" target="_blank" class="project-link">Visit GitHub →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Card with Progress Bars -->
+      <section class="card" id="skills-card">
+        <div class="section-title">Skills</div>
+        <div class="skills-grid">
+          <div class="skill-item" data-progress="95">
+            <div class="skill-header">
+              <span class="skill-name">SQL</span>
+              <span class="skill-level">Expert</span>
+            </div>
+            <div class="skill-bar"><div class="skill-progress" style="--progress: 95%"></div></div>
+          </div>
+          <div class="skill-item" data-progress="90">
+            <div class="skill-header">
+              <span class="skill-name">Apache Spark (Python, Scala)</span>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <div class="skill-bar"><div class="skill-progress" style="--progress: 90%"></div></div>
+          </div>
+          <div class="skill-item" data-progress="88">
+            <div class="skill-header">
+              <span class="skill-name">BigQuery & Databricks</span>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <div class="skill-bar"><div class="skill-progress" style="--progress: 88%"></div></div>
+          </div>
+          <div class="skill-item" data-progress="85">
+            <div class="skill-header">
+              <span class="skill-name">Airflow & Cloud Composer</span>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <div class="skill-bar"><div class="skill-progress" style="--progress: 85%"></div></div>
+          </div>
+          <div class="skill-item" data-progress="90">
+            <div class="skill-header">
+              <span class="skill-name">Python & Shell Scripting</span>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <div class="skill-bar"><div class="skill-progress" style="--progress: 90%"></div></div>
+          </div>
+          <div class="skill-item" data-progress="82">
+            <div class="skill-header">
+              <span class="skill-name">AWS (S3, Lambda, Athena, Glue)</span>
+              <span class="skill-level">Proficient</span>
+            </div>
+            <div class="skill-bar"><div class="skill-progress" style="--progress: 82%"></div></div>
+          </div>
+          <div class="skill-item" data-progress="85">
+            <div class="skill-header">
+              <span class="skill-name">GCP (Dataproc, Dataflow, GCS)</span>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <div class="skill-bar"><div class="skill-progress" style="--progress: 85%"></div></div>
+          </div>
+          <div class="skill-item" data-progress="80">
+            <div class="skill-header">
+              <span class="skill-name">Git & UNIX</span>
+              <span class="skill-level">Proficient</span>
+            </div>
+            <div class="skill-bar"><div class="skill-progress" style="--progress: 80%"></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Card -->
+      <section class="card" id="contact-card">
+        <div class="section-title">Contact</div>
+        <p>Email: <a class="contact-link" href="mailto:poorneshofficial@gmail.com">poorneshofficial@gmail.com</a></p>
+        <p>LinkedIn: <a class="contact-link" href="https://in.linkedin.com/in/poornesh-s-3093991b0" target="_blank">poornesh-s-3093991b0</a></p>
+        <p>GitHub: <a class="contact-link" href="https://github.com/poornesh4559" target="_blank">poornesh4559</a></p>
+      </section>
+    </div>
+
+    <div style="text-align:center;">
+      <a class="resume-btn" href="POORNESH_DE.pdf" download>Download Resume</a>
+    </div>
   </div>
 
-  <div style="text-align:center; margin: 3rem 0 2rem 0;">
-    <a class="resume-btn" href="POORNESH_DE.pdf" download>Download Resume</a>
-  </div>
-
-  <script src="main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
